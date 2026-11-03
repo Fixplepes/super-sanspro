@@ -1,0 +1,920 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f6f8;
+    color: #17243a;
+}
+
+.header {
+    height: 90px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 20px #00000008;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.school-icon {
+    display: flex;
+    width: 65px;
+    height: 38qpx;
+    object-fit: contain;
+    border-radius: 15px;
+    border-style: solid;
+
+}
+
+.logo-area h2 {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #26344b;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.header-nav a:hover {
+    color: #4779d5;
+}
+
+
+
+.account-btn {
+    padding: 13px 22px;
+    background: #1c2c46;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    background-position:center;
+    background-size: 100px 70px;
+}
+
+.account-btn:hover {
+   background-position:center;
+    background-image: url('https://media.tenor.com/eoH2elkQBzAAAAAM/deltarune-jevil.gif');
+    width: 105px;
+    height: 50px;
+}
+
+.mario {
+    height: 550px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background:
+        url('images/background.jpg') center/cover no-repeat,
+        #172b48;
+    color: white;
+
+}
+
+.mario-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(9, 20, 39, .93),
+        rgba(9, 20, 39, .65),
+        rgba(9, 20, 39, .15)
+    );
+}
+
+.mario-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.mario-label,
+.section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #1b3a7e;
+}
+
+.school-title{
+    font-size: clamp(55px, 8vw, 95px);
+    font-weight: 800;
+    margin: 15px 0 45px;
+    color: rgb(95, 204, 200);
+}
+
+.mario-content h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.mario-content p {
+    max-width: 550px;
+    line-height: 1.9;
+    color: #d2dbea;
+    font-size: 15px;
+}
+
+.mario-btn {
+    display: inline-block;
+    margin-top: 35px;
+    background: #4779d5;
+    color: white;
+    text-decoration: none;
+    padding: 17px 28px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.mario-btn:hover {
+    transform: translateY(-3px);
+}
+
+.mario-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    justify-content: space-between;
+    color: #c1cce0;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+
+.section {
+    padding: 110px 10%;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin: 12px 0;
+    color: #17243a;
+}
+
+.section-heading p {
+    color: #8792a3;
+    font-size: 14px;
+}
+
+.student-class {
+    background: #1d2d47;
+    color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.student-class span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #a6b8d6;
+}
+
+.student-class h2 {
+    font-size: 28px;
+    margin-top: 8px;
+}
+
+.class-icon {
+    width: 65px;
+    height: 65px;
+    border: 1px solid #6e8fbd;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+
+.nav-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 16px 25px;
+    background: white;
+    border: 1px solid #e7eaf0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #647087;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.tab-btn span {
+    margin-right: 7px;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background: #1d2d47;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    animation: appear .35s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.small-label {
+    display: block;
+    color: #8b97a9;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.content-title h3 {
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+.day-badge {
+    background: #eaf0fa;
+    color: #416dc1;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lesson {
+    display: flex;
+    align-items: center;
+    padding: 19px 22px;
+    background: #f7f8fa;
+    border-radius: 8px;
+    transition: .25s;
+}
+
+.lesson:hover {
+    background: #edf2fb;
+    transform: translateX(5px);
+}
+
+.lesson-number {
+    color: #9aa9bf;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 25px;
+}
+
+.lesson-info {
+    flex: 1;
+}
+
+.lesson-info h4 {
+    font-size: 14px;
+}
+
+.lesson-info span {
+    display: block;
+    font-size: 11px;
+    color: #9ba4b3;
+    margin-top: 5px;
+}
+
+.lesson-time {
+    font-size: 13px;
+    font-weight: 700;
+    color: #416dc1;
+}
+
+
+.grade-card {
+    max-width: 550px;
+    margin: 15px auto;
+    padding: 45px 30px;
+    text-align: center;
+    background: #f7f8fa;
+    border-radius: 12px;
+}
+
+.subject-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0;
+}
+
+.subject-selector h3 {
+    font-size: 22px;
+}
+
+.arrow-btn {
+    width: 43px;
+    height: 43px;
+    background: white;
+    border: 1px solid #e1e6ee;
+    border-radius: 8px;
+    color: #416dc1;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.arrow-btn:hover {
+    background: #1d2d47;
+    color: white;
+}
+
+.grade-number {
+    margin-bottom: 20px;
+}
+
+.grade-number span:first-child {
+    font-size: 75px;
+    font-weight: 800;
+    color: #1d2d47;
+}
+
+.grade-max {
+    color: #a0aaba;
+    font-size: 20px;
+}
+
+.grade-progress {
+    height: 8px;
+    background: #e3e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.grade-progress-fill {
+    width: 84%;
+    height: 100%;
+    background: #4779d5;
+    border-radius: 20px;
+}
+
+.grade-card > p {
+    color: #8b97a9;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.grade-status {
+    display: inline-block;
+    margin-top: 20px;
+    background: #e4f5e9;
+    color: #238b4b;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.status-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 30px;
+    border: 2px solid #36b86c;
+    background: #f4fcf6;
+    border-radius: 10px;
+}
+
+.status-indicator {
+    width: 15px;
+    height: 15px;
+    background: #36b86c;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px #36b86c20;
+}
+
+.status-card h2 {
+    font-size: 25px;
+    color: #238b4b;
+    margin: 7px 0;
+}
+
+.status-card p {
+    font-size: 12px;
+    color: #7b9584;
+}
+
+.status-open {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 800;
+    color: #238b4b;
+}
+
+.status-info {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #82918b;
+}
+
+.status-info span {
+    color: #36b86c;
+}
+
+
+.daily-section {
+    background: #edf0f5;
+}
+
+.daily-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.daily-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    min-width: 0;
+    transition: .3s;
+}
+
+.daily-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px #15233c10;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.card-number {
+    font-size: 10px;
+    font-weight: 700;
+    color: #8c99ac;
+    letter-spacing: 1px;
+}
+
+.card-icon {
+    font-size: 23px;
+}
+
+.daily-card > h3 {
+    font-size: 21px;
+    margin-bottom: 22px;
+}
+
+
+.food-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.food-images img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #e9edf3;
+}
+
+.food-description {
+    margin-top: 25px;
+}
+
+.food-description h4 {
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.food-description > p {
+    color: #9aa4b2;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.food-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: #f7f8fa;
+    padding: 13px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.food-item > span {
+    font-size: 23px;
+}
+
+.food-item b {
+    font-size: 12px;
+}
+
+.food-item p {
+    color: #919baa;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+.director-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 8px;
+    background: #e9edf3;
+}
+
+.director-message {
+    margin-top: 22px;
+}
+
+.director-message h4 {
+    margin: 13px 0;
+    font-size: 18px;
+}
+
+.director-message p {
+    font-size: 12px;
+    color: #778397;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.director-signature {
+    border-top: 1px solid #edf0f4;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 11px;
+    color: #416dc1;
+    font-weight: 700;
+}
+
+
+.school-status-card {
+    border: 2px solid #36b86c;
+    background: #f4fcf6;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.school-status-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #36b86c;
+    color: white;
+    font-size: 32px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+}
+
+.school-status-card h2 {
+    color: #238b4b;
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.school-status-card p {
+    font-size: 12px;
+    color: #819687;
+    line-height: 1.7;
+}
+
+.school-open-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: #238b4b;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.school-open-badge span {
+    width: 9px;
+    height: 9px;
+    background: #36b86c;
+    border-radius: 50%;
+}
+
+.school-status-bottom {
+    font-size: 11px;
+    color: #87948c;
+    margin-top: 20px;
+}
+
+.school-status-bottom span {
+    color: #36b86c;
+}
+
+
+.footer {
+    background: #101722;
+    color: white;
+    padding: 70px 10% 25px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding-bottom: 55px;
+}
+
+.footer-left {
+    max-width: 300px;
+}
+
+.footer-left h2 {
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.footer-left h2 span {
+    color: #5687e0;
+}
+
+.footer-left p {
+    font-size: 12px;
+    color: #9ca9ba;
+    line-height: 1.8;
+}
+
+.gallery-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 20px;
+    background: #273a57;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.gallery-btn:hover {
+    background: #4779d5;
+}
+
+.footer-links {
+    display: flex;
+    gap: 65px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #9ca9ba;
+    font-size: 11px;
+    transition: .2s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #293342;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #778496;
+    font-size: 10px;
+}
+
+
+@media (max-width: 1000px) {
+    .daily-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        padding: 0 4%;
+    }
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footer-links {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        height: auto;
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-area h2 {
+        font-size: 19px;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .header-nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-nav a {
+        font-size: 11px;
+    }
+
+    .account-btn {
+        padding: 10px 13px;
+        font-size: 11px;
+        background-position:center;
+    }
+
+    .mario {
+        height: 570px;
+        padding: 0 7%;
+    }
+
+    .mario-content h2 {
+        font-size: 20px;
+    }
+
+    .mario-content p {
+        font-size: 13px;
+    }
+
+    .mario-bottom {
+        left: 7%;
+        right: 7%;
+        font-size: 8px;
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .student-class {
+        padding: 25px;
+    }
+
+    .tab-btn {
+        flex: 1;
+        padding: 13px 9px;
+        font-size: 10px;
+    }
+
+    .tab-content {
+        padding: 20px 15px;
+    }
+
+    .lesson {
+        padding: 15px 10px;
+    }
+
+    .lesson-number {
+        margin-right: 12px;
+    }
+
+    .lesson-info h4,
+    .lesson-time {
+        font-size: 11px;
+    }
+
+    .daily-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .status-card {
+        padding: 20px 12px;
+        gap: 12px;
+    }
+
+    .status-open {
+        font-size: 9px;
+    }
+
+    .status-card h2 {
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: white;
+}
+
+
+.background {
+    position: fixed;
+    inset: 0;
+    background-image: url("https://assets2.cbsnewsstatic.com/hub/i/r/2023/04/21/60deb721-79fa-4820-8c73-4cf71a7146ac/thumbnail/1200x630/76e73efcdd367504264486ef5ae83830/18-p-school-fight-wfor7ct5.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(45%);
+    z-index: -1;
+}
+
+
+header {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 5px black;
+}
+
+header p {
+    font-size: 18px;
+    color: #777777;
+}
+
+
+.gallery {
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+.student {
+    background: rgba(255, 255, 255, 0.92);
+    color: #222;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+
+
+.student img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.student h2 {
+    font-size: 22px;
+    margin: 15px 10px 8px;
+    color: #234c80;
+}
+
+.student p {
+    font-size: 14px;
+    padding: 0 12px 18px;
+    line-height: 1.5;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+    background: rgba(0,0,0,0.5);
+}
+
+

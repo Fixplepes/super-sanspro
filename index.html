@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>школа 44</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-area">
+        <img class="school-icon" src="images/original/images.jpg" alt="">
+        <h2>школа #44</h2>
+    </div>
+
+    <nav class="header-nav">
+        <a href="#home">главная</a>
+        <a href="#navigation">навигация</a>
+        <a href="#daily">формы дня</a>
+        <button class="account-btn" onclick="showAccount()">
+            аккаунт
+        </button>
+    </nav>
+</header>
+
+<section class="mario" id="home">
+    <div class="mario-overlay"></div>
+
+    <div class="mario-content">
+        <span class="mario-label">читаете ли вы это?</span>
+
+        <h1 class="school-title">школа #44</h1>
+
+        <h2>место, где создаётся будущее(нет)</h2>
+
+        <p>
+            добро пожаловать на информационный сайт нашей школы!
+            здесь вы можете узнать расписание уроков, посмотреть
+            свой средний балл, узнать последние новости и быть
+            в курсе школьной жизни.
+        </p>
+
+    </div>
+
+    <div class="mario-bottom">
+        <span>ОБРАЗОВАНИЕ - РАЗВИТИЕ - БУДУЩЕЕ - МАКАРОНЫ С ТЕФТЕЛЕЙ</span>
+        <span>я ахмед</span>
+    </div>
+</section>
+
+<section class="navigation section" id="navigation">
+
+    <div class="section-heading">
+        <span class="section-label">ЛИЧНЫЙ КАБИНЕТ</span>
+        <h2>навигация</h2>
+        <p>вся необходимая информация об учёбе в одном месте</p>
+    </div>
+
+    <div class="student-class">
+        <div>
+            <span>ТЕКУЩИЙ КЛАСС</span>
+            <h2>8 «Г» класс</h2>
+        </div>
+
+        
+    </div>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="openTab('schedule', this)">
+            <span></span> расписание
+        </button>
+
+        <button class="tab-btn" onclick="openTab('grades', this)">
+            <span></span> средний балл
+        </button>
+
+        <button class="tab-btn" onclick="openTab('student-status', this)">
+            <span></span> статус ученика
+        </button>
+    </div>
+
+    <div class="tab-content active" id="schedule">
+
+        <div class="content-title">
+            <div>
+                <span class="small-label">РАСПИСАНИЕ УРОКОВ</span>
+                <h3>понедельник</h3>
+            </div>
+            
+        </div>
+
+        <div class="schedule-list">
+
+            <div class="lesson">
+                <span class="lesson-number">01</span>
+                <div class="lesson-info">
+                    <h4>алгебра</h4>
+                   
+                </div>
+                <span class="lesson-time">8:00 – 8:45</span>
+            </div>
+
+            <div class="lesson">
+                <span class="lesson-number">02</span>
+                <div class="lesson-info">
+                    <h4>русский язык</h4>
+                </div>
+                <span class="lesson-time">8:55 – 9:40</span>
+            </div>
+
+            <div class="lesson">
+                <span class="lesson-number">03</span>
+                <div class="lesson-info">
+                    <h4>биология</h4>
+        
+                </div>
+                <span class="lesson-time">9:50 – 10:35</span>
+            </div>
+
+            <div class="lesson">
+                <span class="lesson-number">04</span>
+                <div class="lesson-info">
+                    <h4>казахский язык</h4>
+                    
+                </div>
+                <span class="lesson-time">10:45 – 11:30</span>
+            </div>
+
+            <div class="lesson">
+                <span class="lesson-number">05</span>
+                <div class="lesson-info">
+                    <h4>физкультура</h4>
+                  
+                </div>
+                <span class="lesson-time">11:40 – 12:25</span>
+            </div>
+
+            <div class="lesson">
+                <span class="lesson-number">06</span>
+                <div class="lesson-info">
+                    <h4>география</h4>
+                 
+                </div>
+                <span class="lesson-time">12:35 – 13:20</span>
+            </div>
+
+            <div class="lesson">
+                <span class="lesson-number">07</span>
+                <div class="lesson-info">
+                    <h4>физика</h4>
+                   
+                </div>
+                <span class="lesson-time">13:30 – 14:15</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tab-content" id="grades">
+
+        <div class="content-title">
+            <div>
+                <span class="small-label">мы тебя отчислим</span>
+                <h3>средний балл</h3>
+            </div>
+            <span class="day-badge">8Г</span>
+        </div>
+
+        <div class="grade-card">
+
+            <span class="small-label">СРЕДНИЙ БАЛЛ ПО ПРЕДМЕТУ</span>
+
+            <div class="subject-selector">
+                <button onclick="changeSubject(-1)" class="arrow-btn">❮</button>
+
+                <h3 id="subjectName">алгебра</h3>
+
+                <button onclick="changeSubject(1)" class="arrow-btn">❯</button>
+            </div>
+
+            <div class="grade-number">
+                <span id="gradeValue">4.2</span>
+                <span class="grade-max">/ 5.0</span>
+            </div>
+
+            <div class="grade-progress">
+                <div class="grade-progress-fill"></div>
+            </div>
+
+            <p>текущий средний балл по выбранному предмету.</p>
+
+            <span class="grade-status">не отчислим</span>
+
+        </div>
+    </div>
+
+   
+    <div class="tab-content" id="student-status">
+
+        <div class="content-title">
+            <div>
+                <span class="small-label">ТЕКУЩЕЕ ПОЛОЖЕНИЕ</span>
+                <h3>статус ученика</h3>
+            </div>
+           
+        </div>
+
+        <div class="status-card">
+           
+
+            <div>
+                <span class="small-label">СТАТУС УЧЕНИКА</span>
+                <h2>на уроках 😭</h2>
+                <p>ученик присутствует на занятиях.</p>
+            </div>
+
+          
+        </div>
+
+        <div class="status-info">
+            <span></span>
+            информация о посещаемости ученика.
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="daily-section section" id="daily">
+
+    <div class="section-heading">
+        <span class="section-label">ШКОЛЬНАЯ ЖИЗНЬ</span>
+        <h2>формы дня!</h2>
+        <p>самая актуальная информация на сегодняшний день.</p>
+    </div>
+
+    <div class="daily-grid">
+
+        <div class="daily-card">
+
+            <div class="card-top">
+                <span class="card-number">СТОЛОВАЯ</span>
+                <span class="card-icon"></span>
+            </div>
+
+            <h3>столовая дня</h3>
+
+            <div class="food-images">
+                <img src="images/original/1488-ed4_wide.jpg" alt="">
+                <img src="images/original/d7c72cde4f368a8b01b76c9b5c23af78.jpg" alt="">
+            </div>
+
+            <div class="food-description">
+                <span class="small-label">МЕНЮ СЕГОДНЯ</span>
+                <h4>вкусный обед</h4>
+                <p>сегодня в меню:</p>
+
+                <div class="food-item">
+                   
+                    <div>
+                        <b>основное блюдо:</b>
+                        <p>кости от рыбы</p>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    
+                    <div>
+                        <b>напиток:</b>
+                        <p>я сам не знаю что это</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="daily-card">
+
+            <div class="card-top">
+                <span class="card-number">РУКОВОДСТВО</span>
+                <span class="card-icon"></span>
+            </div>
+
+            <h3>сообщение от начальника</h3>
+
+           <img class="director-image" src="images/original/maxresdefault.jpg" alt="">
+
+            <div class="director-message">
+                <span class="small-label">важное обращение</span>
+
+                <h4>всем внимательно читать!</h4>
+
+                <p>
+                    кто то из вас украл мой кошелёк, и если вы по хорошему не отдатите, я лично заставлю вас учить биологию все 7 уроков. ежедневно.
+                </p>
+
+                <p>
+                    если вы скажете кто украл, то можете не ходить в школу по субботам и воскресению
+                </p>
+
+                <div class="director-signature">
+                    с уважением, абрахим абдылаевич обамэ
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="daily-card">
+
+            <div class="card-top">
+                <span class="card-number">ИНФОРМАЦИЯ</span>
+                <span class="card-icon"></span>
+            </div>
+
+            <h3>статус школы</h3>
+
+            <div class="school-status-card">
+
+               
+
+                <span class="small-label">ТЕКУЩИЙ СТАТУС</span>
+
+                <h2>школа открыта</h2>
+
+                <p>
+                    образовательный процесс проходит в штатном режиме.
+                </p>
+
+                <div class="school-open-badge">
+                    <span></span> ОТКРЫТО
+                </div>
+
+            </div>
+
+            <div class="school-status-bottom">
+                <span></span>
+                школа работает в обычном режиме
+                          <br>
+                          <br>
+                пирожки в столовой больше нет, потому что вчера отравлиись все
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-left">
+            <h2>школа #44<span>.</span></h2>
+
+            <p>
+                образование, развитие и новые возможности.
+                <br>
+                я ахмед
+            </p>
+
+            <a href="gallery.html" class="gallery-btn">
+                 школьная галерея
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <h4>О школе</h4>
+                <a href="#home">Главная</a>
+                <a href="#navigation">Навигация</a>
+                <a href="#daily">Школьная жизнь</a>
+            </div>
+
+            <div>
+                <h4>Информация</h4>
+                <a href="#navigation">Расписание</a>
+                <a href="#navigation">Успеваемость</a>
+                <a href="#daily">Столовая</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom" id="footer">
+        <span>© 2026 Школа #44. Все права не защищены.</span>
+        <span>вы точно это читаете?</span>
+    </div>
+
+</footer>
+
+<script src="js.js"></script>
+</body>
+</html>
